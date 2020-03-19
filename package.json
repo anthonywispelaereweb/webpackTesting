@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dashboard webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
+    "webpack-dashboard": "^3.2.0",
     "webpack-dev-server": "^3.10.1"
   }
 }

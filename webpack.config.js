@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require("webpack-dashboard/plugin");
 module.exports = {
   entry: {
     main: path.join(__dirname, 'src/index.js'),
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, './dist'),
     filename: '[name].bundle.js',
   },
   module: {
@@ -25,7 +26,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src/index.html'),
     }),
-    require("autoprefixer")
+    new DashboardPlugin()
   ],
   stats: 'minimal',
   devtool: 'source-map',
@@ -34,6 +35,6 @@ module.exports = {
     open: false,
     contentBase: './dist',
     inline: true,
-    port: 4000,
+    port: 4001,
   },
 };
